@@ -1,0 +1,15 @@
+khd + web桌面客户application
+ie8/electron内核
+
+Cases:
+  1.禁止右键菜单
+  2.禁止快捷键F5\F12\backspace
+  3.禁止页面文字选中但是输入框可选
+  4.如果为低版本如ie8内核。js\html\css注意兼容性写法,圆角阴影可用切图背景代替
+  5.数据连接函数需要暴露在最外层js,script标签最前
+    //不是放在jquery $(function(){})之前,将会找不到
+    //数据连接函数
+    var cpp_object; 
+		function SaveCppObject(obj) {
+	    cpp_object = obj;
+	  }
